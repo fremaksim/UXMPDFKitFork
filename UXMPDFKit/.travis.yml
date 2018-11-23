@@ -1,0 +1,13 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+language: objective-c
+osx_image: xcode8
+# cache: cocoapods
+# podfile: Example/Podfile
+before_install:
+  - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
+# - pod install --project-directory=Example
+script:
+  - pod lib lint

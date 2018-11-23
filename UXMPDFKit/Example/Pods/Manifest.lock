@@ -1,0 +1,16 @@
+PODS:
+  - UXMPDFKit (0.4.7)
+
+DEPENDENCIES:
+  - UXMPDFKit (from `../`)
+
+EXTERNAL SOURCES:
+  UXMPDFKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UXMPDFKit: fe7d8d6ae849b679a9eb61a4eb3b38851ee4ff09
+
+PODFILE CHECKSUM: 46572415aec518e632bcccd6baa0dcc394d5ae6e
+
+COCOAPODS: 1.1.1
