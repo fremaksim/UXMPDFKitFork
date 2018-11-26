@@ -244,6 +244,9 @@ open class PDFAnnotationController: UIViewController {
                 
                 pageView?.addSubview(currentAnnotation.mutableView())
             }
+            if let page = pageView {
+                currentAnnotation?.rectForBorderView = CGRect(x: 0, y: 0, width: page.bounds.width, height: page.bounds.height)
+            }
         }
         
         let point = touch.location(in: pageView)

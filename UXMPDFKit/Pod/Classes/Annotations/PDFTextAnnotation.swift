@@ -15,6 +15,12 @@ open class PDFTextAnnotation: NSObject, NSCoding {
     public var saved: Bool = false
     public var delegate: PDFAnnotationEvent?
     
+    public var rectForBorderView: CGRect = .zero {
+        didSet{
+            
+        }
+    }
+    
     var text: String = "" {
         didSet {
             view.text = text

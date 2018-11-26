@@ -21,6 +21,8 @@ public protocol PDFAnnotation {
     
     var delegate: PDFAnnotationEvent? { get set }
     
+    var rectForBorderView: CGRect {get set}
+    
     /// Force implementations to have an init
     init()
     

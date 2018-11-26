@@ -17,6 +17,12 @@ open class PDFPathAnnotation: NSObject, NSCoding {
     
     var path: UIBezierPath = UIBezierPath()
     
+    public var rectForBorderView: CGRect = .zero {
+        didSet {
+            rect = rectForBorderView
+        }
+    }
+    
     /// The color for the stroke to be
     public var color: UIColor = UIColor.black {
         didSet {

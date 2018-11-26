@@ -12,9 +12,9 @@ import UXMPDFKit
 class ExampleViewController: UIViewController {
     
     @IBAction func loadPDF() {
-
-        let url = Bundle.main.path(forResource: "Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley", ofType: "pdf")!
-//        let url = Bundle.main.path(forResource: "Reader", ofType: "pdf")!
+//
+//        let url = Bundle.main.path(forResource: "Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley", ofType: "pdf")!
+        let url = Bundle.main.path(forResource: "Reader", ofType: "pdf")!
         let document = try! PDFDocument.from(filePath: url)
         
         let pdf = PDFViewController(document: document!)
