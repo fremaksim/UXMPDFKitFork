@@ -201,7 +201,7 @@ public class PDFPageContent: UIView {
             for i in 0...CGPDFArrayGetCount(pageAnnotations!) {
                 var annotationDictionary: CGPDFDictionaryRef? = nil
                 guard CGPDFArrayGetDictionary(pageAnnotations!, i, &annotationDictionary) else { continue }
-                    
+                
                 var annotationSubtype: UnsafePointer<Int8>? = nil
                 guard CGPDFDictionaryGetName(annotationDictionary!, "Subtype", &annotationSubtype) else { continue }
                 guard strcmp(annotationSubtype, "Link") == 0 else { continue }
@@ -221,7 +221,7 @@ public class PDFPageContent: UIView {
         for link in links where link.rect.contains(point) {
             return PDFAction.fromPDFDictionary(link.dictionary, documentReference: pdfDocRef)
         }
-
+        
         for annotation in subviews where annotation.frame.contains(point) {
             return annotation
         }
@@ -235,6 +235,8 @@ public class PDFPageContent: UIView {
         ctx.setFillColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         ctx.fill(ctx.boundingBoxOfClipPath)
         
+//        Se7enDrawTiled(in: ctx, with: pdfPageRef) // Render tile
+        
         /// Translate for page
         ctx.translateBy(x: 0.0, y: bounds.size.height)
         ctx.scaleBy(x: 1.0, y: -1.0)
@@ -242,6 +244,40 @@ public class PDFPageContent: UIView {
         
         /// Render the PDF page into the context
         ctx.drawPDFPage(pdfPageRef)
+    }
+    
+    func renderTile(in context: CGContext) {
+        
+        guard let pdfPageRef = pdfPageRef else { return }
+        
+        Se7enDrawTiled(in: context, with: pdfPageRef)
+        
+    }
+    
+    func Se7enDrawTiled(in ctx: CGContext,with page: CGPDFPage) { //Native tile render
+        
+        ctx.saveGState()
+        var rect = CGRect.zero
+        rect.size = bounds.size
+        
+        ctx.setFillColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        let cropBoxRect = ctx.boundingBoxOfClipPath
+        ctx.fill(cropBoxRect)
+        
+        // covert to UIKit Coordinator
+        ctx.translateBy(x: 0.0, y: bounds.height)
+        ctx.scaleBy(x: 1.0, y: -1.0)
+        
+        let cat = page.getDrawingTransform(CGPDFBox.cropBox, rect: rect, rotate: 0, preserveAspectRatio: true)
+        ctx.concatenate(cat)
+        
+        ctx.drawPDFPage(page)
+        ctx.restoreGState()
+        
+        //TODO: - Need or not ???
+        ctx.saveGState()
+        
     }
     
     deinit {

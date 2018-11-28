@@ -7,6 +7,12 @@
 //
 
 import UIKit
+import CoreGraphics
+
+public protocol ReaderRenderTileInContext: class {
+    
+    func renderTile(with documentPage: PDFPageContent, in Context: CGContext)
+}
 
 open class PDFDocument: NSObject, NSCoding {
     
@@ -33,6 +39,8 @@ open class PDFDocument: NSObject, NSCoding {
     open var modificationDate: Date?
     open var creationDate: Date?
     open var version: Float = 0.0
+    
+    private var renderTile: ReaderRenderTileInContext?
     
     /// Document annotations
     open var annotations: PDFAnnotationStore = PDFAnnotationStore()
@@ -196,6 +204,14 @@ open class PDFDocument: NSObject, NSCoding {
             return pageRef
         }
         return nil
+    }
+    
+    //MARK: - watermark
+    func setRenderTile(renderer: ReaderRenderTileInContext) {
+        renderTile = renderer
+    }
+    func getRenderTile() -> ReaderRenderTileInContext? {
+        return renderTile
     }
     
     

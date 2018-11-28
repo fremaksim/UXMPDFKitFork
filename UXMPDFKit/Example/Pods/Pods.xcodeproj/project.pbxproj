@@ -35,6 +35,8 @@
 		61D72DBD1DDB705B003CE472 /* PDFActionURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D72DBC1DDB705B003CE472 /* PDFActionURL.swift */; };
 		61D72DBE1DDB7062003CE472 /* PDFActionGoTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D72DBA1DDB7039003CE472 /* PDFActionGoTo.swift */; };
 		61D72DC11DDB7C15003CE472 /* PDFTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D72DC01DDB7C15003CE472 /* PDFTextParser.swift */; };
+		6A0ED6D221AD5B33003B79D8 /* ReaderPageTiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0ED6D121AD5B33003B79D8 /* ReaderPageTiledView.swift */; };
+		6A0ED6D421AD5D40003B79D8 /* ReaderTiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0ED6D321AD5D40003B79D8 /* ReaderTiledLayer.swift */; };
 		6CBA8437445A566C49E81E0FA15F8B89 /* Pods-UXMPDFKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5680F0C21DEB74F7B47666298F36DB /* Pods-UXMPDFKit_Example-dummy.m */; };
 		75332EB7DF07634FEBA4DB30AED834DE /* PDFBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1A9EB3AA234A93FFED5E5EC31C26C0 /* PDFBarButton.swift */; };
 		75EBCC5DA128D1197EE38C0D71ED2E61 /* PDFSinglePageViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33BD08506077733D10565FD32AAE01D /* PDFSinglePageViewer.swift */; };
@@ -104,6 +106,8 @@
 		61D72DC01DDB7C15003CE472 /* PDFTextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFTextParser.swift; sourceTree = "<group>"; };
 		64082BD427D609690F7BB6818051DE3D /* PDFArray.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PDFArray.swift; sourceTree = "<group>"; };
 		69FD1010A27EE6442B7768D3B955DBF9 /* PDFAction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PDFAction.swift; sourceTree = "<group>"; };
+		6A0ED6D121AD5B33003B79D8 /* ReaderPageTiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderPageTiledView.swift; sourceTree = "<group>"; };
+		6A0ED6D321AD5D40003B79D8 /* ReaderTiledLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTiledLayer.swift; sourceTree = "<group>"; };
 		6EC48780BD915E4D5ACCE82C88A1AB13 /* PDFFormField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PDFFormField.swift; sourceTree = "<group>"; };
 		73B9DE7CB16631F30FAE38D53282A2FE /* Pods-UXMPDFKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UXMPDFKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		75574BE886F738F3093CE3A2F50EDEC8 /* Pods-UXMPDFKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UXMPDFKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -333,6 +337,15 @@
 			path = TextParser;
 			sourceTree = "<group>";
 		};
+		6A0ED6CF21AD5A08003B79D8 /* Watermark */ = {
+			isa = PBXGroup;
+			children = (
+				6A0ED6D121AD5B33003B79D8 /* ReaderPageTiledView.swift */,
+				6A0ED6D321AD5D40003B79D8 /* ReaderTiledLayer.swift */,
+			);
+			path = Watermark;
+			sourceTree = "<group>";
+		};
 		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +410,7 @@
 		D17F081B2041A570628ABBA6B6B55AA2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6A0ED6CF21AD5A08003B79D8 /* Watermark */,
 				61C3A26F1EC3C0DF00807C4B /* View */,
 				0D5534176FDA413966A2FA057AB7673C /* Annotations */,
 				0F2EF4198B8CF05B867C8F5A18697809 /* Extensions */,
@@ -494,7 +508,7 @@
 				LastUpgradeCheck = 0830;
 				TargetAttributes = {
 					D7C77B95095598F2FFA1E9456D29905E = {
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -549,6 +563,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CBA8437445A566C49E81E0FA15F8B89 /* Pods-UXMPDFKit_Example-dummy.m in Sources */,
+				6A0ED6D421AD5D40003B79D8 /* ReaderTiledLayer.swift in Sources */,
+				6A0ED6D221AD5B33003B79D8 /* ReaderPageTiledView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

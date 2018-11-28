@@ -26,6 +26,8 @@ open class PDFPageContentView: UIScrollView, UIScrollViewDelegate {
     fileprivate var previousScale: CGFloat = 1.0
 
     let bottomKeyboardPadding: CGFloat = 20.0
+    
+    fileprivate var pageTiledView: ReaderPageTiledView! 
 
     init(frame: CGRect, document: PDFDocument, page: Int) {
         self.page = page

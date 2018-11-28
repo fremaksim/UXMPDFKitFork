@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import UIKit
+import CoreGraphics
+
 
 open class PDFAction {
     open static func fromPDFDictionary(_ sourceDictionary: CGPDFDictionaryRef, documentReference: CGPDFDocument) -> PDFAction? {

@@ -6,7 +6,8 @@
 //
 //
 
-import Foundation
+import UIKit
+import CoreGraphics
 
 public enum CGPDFDocumentError: String, Error {
     case fileDoesNotExist
