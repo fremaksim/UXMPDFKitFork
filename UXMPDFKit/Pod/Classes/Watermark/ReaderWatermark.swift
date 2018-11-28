@@ -33,7 +33,7 @@ open class ReaderWatermark: NSObject {
         
         let font = UIFont.init(name: "Helvetica", size: 36.0)
         let color = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.1)
-        let attributes = [NSFontAttributeName : font, NSForegroundColorAttributeName: color]
+        let attributes = [NSAttributedString.Key.font : font, NSAttributedString.Key.foregroundColor: color]
         
         for line in lines { // Enumerate watermark text lines
             

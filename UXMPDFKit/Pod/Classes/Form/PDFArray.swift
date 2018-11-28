@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreGraphics
+import Foundation
 
 internal class PDFArray: PDFObject {
     fileprivate var arr: CGPDFArrayRef
@@ -19,7 +21,7 @@ internal class PDFArray: PDFObject {
         array = copyAsArray()
     }
     
-    var type: CGPDFObjectType {
+    var objectType: CGPDFObjectType {
         return CGPDFObjectType.array
     }
     
@@ -163,6 +165,7 @@ internal class PDFArray: PDFObject {
 
 extension PDFArray: NSCopying {
     func copy(with zone: NSZone?) -> Any {
+        
         return type(of: self).init(arrayRef: arr)
     }
 }

@@ -136,7 +136,7 @@ open class PDFAnnotationController: UIViewController {
         for annotation in annotationsForPage {
             let view = annotation.mutableView()
             contentView.contentView.addSubview(view)
-            contentView.contentView.bringSubview(toFront: view)
+            contentView.contentView.bringSubviewToFront(view)
         }
     }
     

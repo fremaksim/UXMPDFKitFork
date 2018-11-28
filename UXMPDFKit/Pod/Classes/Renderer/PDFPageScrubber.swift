@@ -72,7 +72,7 @@ open class PDFPageScrubber: UIToolbar {
         let pageNumberLabel = UILabel(frame: textRect)
         
         pageNumberLabel.autoresizesSubviews = false
-        pageNumberLabel.autoresizingMask = UIViewAutoresizing()
+        pageNumberLabel.autoresizingMask = UIView.AutoresizingMask()
         pageNumberLabel.textAlignment = .center
         pageNumberLabel.backgroundColor = UIColor.clear
         pageNumberLabel.textColor = UIColor.darkText
@@ -263,7 +263,7 @@ open class PDFPageScrubber: UIToolbar {
         }
     }
     
-    func trackTimerFired(_ timer: Timer) {
+    @objc func trackTimerFired(_ timer: Timer) {
         trackTimer?.invalidate()
         trackTimer = nil
         if scrubber.tag != document.currentPage {
@@ -271,7 +271,7 @@ open class PDFPageScrubber: UIToolbar {
         }
     }
     
-    func enableTimerFired(_ timer: Timer) {
+    @objc func enableTimerFired(_ timer: Timer) {
         enableTimer?.invalidate()
         enableTimer = nil
         scrubber.isUserInteractionEnabled = true
@@ -310,7 +310,7 @@ open class PDFPageScrubber: UIToolbar {
         return page + 1
     }
     
-    func scrubberTouchDown(_ scrubber: PDFPageScrubberTrackControl) {
+    @objc func scrubberTouchDown(_ scrubber: PDFPageScrubberTrackControl) {
         let page = scrubberPageNumber(scrubber)
         
         if page != document.currentPage {
@@ -322,7 +322,7 @@ open class PDFPageScrubber: UIToolbar {
         scrubber.tag = page
     }
     
-    func scrubberTouchUp(_ scrubber: PDFPageScrubberTrackControl) {
+    @objc func scrubberTouchUp(_ scrubber: PDFPageScrubberTrackControl) {
         if trackTimer != nil {
             trackTimer?.invalidate()
             trackTimer = nil
@@ -337,7 +337,7 @@ open class PDFPageScrubber: UIToolbar {
         scrubber.tag = 0
     }
     
-    func scrubberValueChanged(_ scrubber: PDFPageScrubberTrackControl) {
+    @objc func scrubberValueChanged(_ scrubber: PDFPageScrubberTrackControl) {
         let page = self.scrubberPageNumber(scrubber)
         if page != scrubber.tag {
             updatePageNumberText(page)

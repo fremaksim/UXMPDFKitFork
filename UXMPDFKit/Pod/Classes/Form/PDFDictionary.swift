@@ -9,7 +9,7 @@
 import UIKit
 
 internal protocol PDFObject {
-    var type: CGPDFObjectType { get }
+    var objectType: CGPDFObjectType { get }
 }
 
 fileprivate class PDFObjectParserContext {
@@ -34,6 +34,8 @@ func == (lhs: PDFDictionary, rhs: PDFDictionary) -> Bool {
 }
 
 internal class PDFDictionary: PDFObject, Equatable {
+
+    
     var dict: CGPDFDictionaryRef
     
     lazy var attributes: [String:AnyObject] = {
@@ -61,7 +63,7 @@ internal class PDFDictionary: PDFObject, Equatable {
     
     var isParent: Bool = false
     
-    var type: CGPDFObjectType {
+    var objectType: CGPDFObjectType {
         return CGPDFObjectType.dictionary
     }
     

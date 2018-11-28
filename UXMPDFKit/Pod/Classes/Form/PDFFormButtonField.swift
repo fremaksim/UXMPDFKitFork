@@ -66,7 +66,7 @@ open class PDFFormButtonField: PDFFormField {
         addSubview(button)
     }
 
-    func buttonPressed() {
+    @objc func buttonPressed() {
         value = (isSelected ? "" : exportValue) as AnyObject?
         delegate?.formFieldValueChanged(self)
     }
@@ -91,7 +91,7 @@ open class PDFFormButtonField: PDFFormField {
         frame.origin.x += self.frame.origin.x
         frame.origin.y += self.frame.origin.y
 
-        let state = isSelected ? UIControlState.selected : UIControlState.normal
+        let state = isSelected ? UIControl.State.selected : UIControl.State.normal
         var title: NSString = ""
         let titleColor = button.titleColor(for: state) ?? UIColor.black
         let font: UIFont = button.titleLabel!.font
@@ -105,10 +105,10 @@ open class PDFFormButtonField: PDFFormField {
         let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.alignment = NSTextAlignment.center
 
-        let attributes: [String:AnyObject] = [
-            NSFontAttributeName: font,
-            NSForegroundColorAttributeName: titleColor,
-            NSParagraphStyleAttributeName: paragraphStyle
+        let attributes: [NSAttributedString.Key: AnyObject] = [
+            NSAttributedString.Key.font: font,
+            NSAttributedString.Key.foregroundColor: titleColor,
+            NSAttributedString.Key.paragraphStyle: paragraphStyle
         ]
 
         title.draw(in: frame, withAttributes: attributes)
