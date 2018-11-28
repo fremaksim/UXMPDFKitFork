@@ -47,7 +47,7 @@ open class ReaderPageTiledView: UIView {
         setNeedsDisplay()
         
     }
-    deinit {  // why badExe
+    deinit {  // why badExe error
         //        layer.delegate = nil
         
     }
@@ -61,10 +61,7 @@ open class ReaderPageTiledView: UIView {
                 renderTile.renderTile(with: pageContent, in: ctx)
             }
         }
-        
     }
-    
-    
 }
 
 

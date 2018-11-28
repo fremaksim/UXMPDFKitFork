@@ -1,16 +1,16 @@
 PODS:
-  - UXMPDFKit (0.4.7)
+  - SwiftyBeaver (1.6.1)
 
 DEPENDENCIES:
-  - UXMPDFKit (from `../`)
+  - SwiftyBeaver
 
-EXTERNAL SOURCES:
-  UXMPDFKit:
-    :path: "../"
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftyBeaver
 
 SPEC CHECKSUMS:
-  UXMPDFKit: fe7d8d6ae849b679a9eb61a4eb3b38851ee4ff09
+  SwiftyBeaver: ccfcdf85a04d429f1633f668650b0ce8020bda3a
 
-PODFILE CHECKSUM: 46572415aec518e632bcccd6baa0dcc394d5ae6e
+PODFILE CHECKSUM: 4cce965480692410f33ade4d6127ebd9d1fc8964
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.6.0.beta.2

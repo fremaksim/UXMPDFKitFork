@@ -2,6 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'UXMPDFKit_Example' do
-  pod 'UXMPDFKit', :path => '../'
+#pod 'UXMPDFKit', :path => '../'
+pod 'SwiftyBeaver'
 end
 
