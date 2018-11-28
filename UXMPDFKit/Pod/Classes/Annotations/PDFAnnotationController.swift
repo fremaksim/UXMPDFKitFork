@@ -188,7 +188,7 @@ open class PDFAnnotationController: UIViewController {
     }
     
     func loadButtons(for annotations: [PDFAnnotation.Type]) {
-        self.buttons = self.annotationTypes.flatMap {
+        self.buttons = self.annotationTypes.compactMap {
             
             if let annotation = $0 as? PDFAnnotationButtonable.Type {
                 return PDFAnnotationBarButton(

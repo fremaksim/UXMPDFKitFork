@@ -119,7 +119,7 @@ open class PDFFormTextField: PDFFormField {
         }
         
         /// UGLY
-        (text as NSString!).draw(in: frame, withAttributes: [
+        (text as NSString).draw(in: frame, withAttributes: [
             NSAttributedString.Key.font: font
             ])
     }

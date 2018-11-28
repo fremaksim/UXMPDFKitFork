@@ -33,7 +33,9 @@ open class ReaderWatermark: NSObject {
         
         let font = UIFont.init(name: "Helvetica", size: 36.0)
         let color = UIColor(red: 0.0, green: 0.0, blue: 1.0, alpha: 0.1)
-        let attributes = [NSAttributedString.Key.font : font, NSAttributedString.Key.foregroundColor: color]
+        let attributes: [NSAttributedString.Key: Any] = [
+            NSAttributedString.Key.font : font!,
+            NSAttributedString.Key.foregroundColor: color]
         
         for line in lines { // Enumerate watermark text lines
             
@@ -50,7 +52,6 @@ open class ReaderWatermark: NSObject {
             }
             textLines.append(text)
             lineSizes.append(textSize)
-
         }
     }
     
@@ -58,7 +59,46 @@ open class ReaderWatermark: NSObject {
 
 extension ReaderWatermark: ReaderRenderTileInContext {
     
-    public func renderTile(with documentPage: PDFPageContent, in Context: CGContext) {
+    public func renderTile(with documentPage: PDFPageContent, in ctx: CGContext) {
+        guard textLines.count > 0  else { return }
         
+        ctx.saveGState()
+        
+        let pageSize = documentPage.viewRect.size // In points
+        let bw = pageSize.width
+        let bh = pageSize.height
+        let ar = (bw > bh) ? (bh / bw) : (bw / bh)
+        let sf = (sqrt(sqrt(ar)) * fudge)
+        
+        // scale 0.5
+        ctx.translateBy(x: bw * 0.5, y: bh * 0.5)
+        // clockwise rotate
+        ctx.rotate(by: -atan2(bh, bw))
+        
+        let ts = ((sqrt(bw * bw + bh * bh) / totalSize.width) * sf)
+        ctx.scaleBy(x: ts, y: -ts)
+        
+        // center
+        let xt = -floor(totalSize.width * 0.5)
+        var yp = -floor(totalSize.height * 0.5)
+        
+        // reverse order
+        var reverseLineSizes = lineSizes
+        var reverseTextLines = textLines
+        reverseLineSizes = reverseLineSizes.reversed()
+        reverseTextLines = reverseTextLines.reversed()
+        
+        for i in 0..<reverseTextLines.count {
+            let linesize = reverseLineSizes[i]
+            let xp = ((totalSize.width - linesize.width) * 0.5 + xt) //line X
+            
+            let cfAttributeString = textLines[i] as CFAttributedString
+            let ctLine = CTLineCreateWithAttributedString(cfAttributeString)
+            
+            ctx.textPosition = CGPoint(x: xp, y: yp)
+            CTLineDraw(ctLine,ctx)
+            yp += linesize.height //Next line Y
+        }
+        ctx.restoreGState()
     }
 }

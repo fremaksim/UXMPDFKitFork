@@ -10,7 +10,6 @@ protocol ReaderPageTiledViewProtocol: class {}
 
 import UIKit
 
-
 open class ReaderPageTiledView: UIView {
     weak var delegate: ReaderPageTiledViewProtocol?
     private var document: PDFDocument? = nil
@@ -45,15 +44,17 @@ open class ReaderPageTiledView: UIView {
         self.document = documentx
         self.page  = page
         
+        setNeedsDisplay()
+        
     }
-    deinit {
-        layer.delegate = nil
+    deinit {  // why badExe
+        //        layer.delegate = nil
         
     }
     
     //MARK: - CATiledLayer Delegate Method
     open override func draw(_ layer: CALayer, in ctx: CGContext) {
-        
+        // async draw ,not main thread 
         if let pageContent = documentPage {
             pageContent.renderTile(in: ctx)
             if let renderTile = document?.getRenderTile() {

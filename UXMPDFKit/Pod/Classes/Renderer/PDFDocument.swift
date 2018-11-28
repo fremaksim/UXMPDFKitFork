@@ -11,7 +11,7 @@ import CoreGraphics
 
 public protocol ReaderRenderTileInContext: class {
     
-    func renderTile(with documentPage: PDFPageContent, in Context: CGContext)
+    func renderTile(with documentPage: PDFPageContent, in ctx: CGContext)
 }
 
 open class PDFDocument: NSObject, NSCoding {

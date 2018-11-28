@@ -27,9 +27,16 @@ open class PDFPageContentView: UIScrollView, UIScrollViewDelegate {
 
     let bottomKeyboardPadding: CGFloat = 20.0
     
-    fileprivate var pageTiledView: ReaderPageTiledView! 
+    private let document: PDFDocument
+    
+    fileprivate lazy var pageTiledView: ReaderPageTiledView? = {
+        let tileView = ReaderPageTiledView(frame: contentView.bounds, documentx: document, page: page)
+        tileView?.delegate = self
+        return tileView
+    }()
 
     init(frame: CGRect, document: PDFDocument, page: Int) {
+        self.document = document
         self.page = page
         contentView = PDFPageContent(document: document, page: page)
 
@@ -63,6 +70,10 @@ open class PDFPageContentView: UIScrollView, UIScrollViewDelegate {
 
         containerView.addSubview(contentView)
         addSubview(containerView)
+        
+        if let tileView = pageTiledView {
+            contentView.addSubview(tileView)
+        }
 
         updateMinimumMaximumZoom()
 
@@ -135,6 +146,8 @@ open class PDFPageContentView: UIScrollView, UIScrollViewDelegate {
 
         containerView.frame = viewFrame
         contentView.frame = containerView.bounds
+        
+        pageTiledView?.frame = containerView.bounds
     }
 
     override open func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -261,3 +274,5 @@ open class PDFPageContentView: UIScrollView, UIScrollViewDelegate {
         maximumZoomScale = zoomScale * 16.0
     }
 }
+
+extension PDFPageContentView: ReaderPageTiledViewProtocol {}

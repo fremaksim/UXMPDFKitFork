@@ -235,7 +235,7 @@ public class PDFPageContent: UIView {
         ctx.setFillColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         ctx.fill(ctx.boundingBoxOfClipPath)
         
-//        Se7enDrawTiled(in: ctx, with: pdfPageRef) // Render tile
+        //        Se7enDrawTiled(in: ctx, with: pdfPageRef) // Render tile
         
         /// Translate for page
         ctx.translateBy(x: 0.0, y: bounds.size.height)
@@ -250,11 +250,11 @@ public class PDFPageContent: UIView {
         
         guard let pdfPageRef = pdfPageRef else { return }
         
-        Se7enDrawTiled(in: context, with: pdfPageRef)
+        se7enDrawTiled(in: context, with: pdfPageRef)
         
     }
     
-    func Se7enDrawTiled(in ctx: CGContext,with page: CGPDFPage) { //Native tile render
+    func se7enDrawTiled(in ctx: CGContext,with page: CGPDFPage) { //Native tile render
         
         ctx.saveGState()
         var rect = CGRect.zero

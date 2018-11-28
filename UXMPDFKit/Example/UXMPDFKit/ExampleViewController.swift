@@ -24,6 +24,9 @@ class ExampleViewController: UIViewController {
             PDFTextAnnotation.self
         ]
         
+        let watermark = ReaderWatermark(textLines: ["www.mozheanquan.com"])
+        document?.setRenderTile(renderer: watermark!)
+        
         self.navigationController?.pushViewController(pdf, animated: true)
     }
 }
