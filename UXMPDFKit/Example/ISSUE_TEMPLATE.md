@@ -19,7 +19,7 @@
 
 ## Your Environment
 <!— Include as many relevant details about the environment you experienced the bug in —>
-* UXMPDF Version:
+* UXMPDFFork Version:
 * iOS Version:
 * Xcode Version:
 * Swift Version:
