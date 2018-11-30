@@ -107,9 +107,23 @@ class PDFPathView: ResizableView, PDFAnnotationView {
         clipsToBounds = false
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        if let point = touches.first?.location(in: self.borderView),
+           let _ = self.borderView.hitTest(point, with: event){
+            
+            Log.output().verbose("touch in boraderView : \(self.borderView)")
+//            self.borderView.touchesBegan(touches, with: event)
+            
+        }else {
+            super.touchesBegan(touches, with: event)
+        }
+    }
+    
     override func draw(_ rect: CGRect) {
         (parent as? PDFPathAnnotation)?.drawRect(rect)
     }
+    
 }
 
 extension PDFPathAnnotation: PDFAnnotation {

@@ -166,7 +166,7 @@ open class PDFViewController: UIViewController {
     }
     
     deinit {
-        print("\(self.description) line 165 (deinit)")
+        Log.output().info("\(self.description)")
     }
     
     open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

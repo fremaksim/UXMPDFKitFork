@@ -231,6 +231,8 @@ open class PDFAnnotationController: UIViewController {
     
     //MARK: - Touches methods to pass to annotation
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        Log.output().info(touches)
+        
         guard let touch = touches.first else { return }
         
         let page = annotationDelegate?.annotationWillStart(touch: touch)

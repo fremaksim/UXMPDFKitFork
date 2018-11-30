@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         let dirPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
-        LogManager.shared.log.info("App Path: \(dirPaths)")
         Log.output().verbose("App Path: \(dirPaths)")
         
         return true

@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D7C77B95095598F2FFA1E9456D29905E"
+               BlueprintIdentifier = "AACD4745BDBE5A36FEEBF4B9D757365F"
                BuildableName = "Pods_UXMPDFKit_Example.framework"
                BlueprintName = "Pods-UXMPDFKit_Example"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
@@ -59,6 +59,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      disableMainThreadChecker = "YES"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"

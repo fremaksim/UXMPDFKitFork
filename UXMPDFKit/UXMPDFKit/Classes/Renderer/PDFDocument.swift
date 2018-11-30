@@ -197,6 +197,15 @@ open class PDFDocument: NSObject, NSCoding {
         self.pageCount = pdfDocRef.numberOfPages
     }
     
+    private func debugPDFInfo(){
+        if let createDate = self.creationDate {
+            Log.output().info(createDate)
+        }
+        if let title = self.title {
+            Log.output().info(title)
+        }
+    }
+    
     func page(at page: Int) -> CGPDFPage? {
         
         if let documentRef = self.documentRef,

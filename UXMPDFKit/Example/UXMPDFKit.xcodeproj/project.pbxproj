@@ -63,10 +63,15 @@
 		6A0ED78F21AD7B7F003B79D8 /* PDFTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0ED75E21AD7B7E003B79D8 /* PDFTextParser.swift */; };
 		6A0ED79121AD7B7F003B79D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0ED76121AD7B7E003B79D8 /* Images.xcassets */; };
 		6A139CDA21A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A139CD921A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf */; };
+		6A20CF4721B11DD200AF5F10 /* testA.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A20CF4621B11DD200AF5F10 /* testA.pdf */; };
 		6A43292621900D47003C1A09 /* xmidnCompare-protected.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A43292521900D47003C1A09 /* xmidnCompare-protected.pdf */; };
 		6A8F85FB21A5305500A1C51E /* Reader.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A8F85FA21A5305500A1C51E /* Reader.pdf */; };
+		6A91CF8D21AFBAC7002E2B94 /* ReaderDocumentOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91CF8C21AFBAC7002E2B94 /* ReaderDocumentOutline.swift */; };
+		6A91CF9121AFC047002E2B94 /* ReaderDocumentOutlineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91CF9021AFC047002E2B94 /* ReaderDocumentOutlineItem.swift */; };
 		6AA3F7BD21AE30E500E63E8A /* ReaderWatermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3F7BC21AE30E500E63E8A /* ReaderWatermark.swift */; };
 		6AA3F7C621AE8D1500E63E8A /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA3F7C521AE8D1500E63E8A /* LogManager.swift */; };
+		6AF8DD5F21B00C5100EDCC38 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF8DD5E21B00C5100EDCC38 /* StringExtensions.swift */; };
+		6AF8DD7021B0E11900EDCC38 /* pdf_reference_1-7.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6AF8DD6F21B0E11900EDCC38 /* pdf_reference_1-7.pdf */; };
 		BB855359DE8AC1D5D8FF299B /* Pods_UXMPDFKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61104B3ED29162AD95CD13DC /* Pods_UXMPDFKit_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,10 +135,16 @@
 		6A0ED75E21AD7B7E003B79D8 /* PDFTextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFTextParser.swift; sourceTree = "<group>"; };
 		6A0ED76121AD7B7E003B79D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A139CD921A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf"; sourceTree = "<group>"; };
+		6A20CF4621B11DD200AF5F10 /* testA.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testA.pdf; sourceTree = "<group>"; };
 		6A43292521900D47003C1A09 /* xmidnCompare-protected.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "xmidnCompare-protected.pdf"; sourceTree = "<group>"; };
 		6A8F85FA21A5305500A1C51E /* Reader.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Reader.pdf; sourceTree = "<group>"; };
+		6A91CF8C21AFBAC7002E2B94 /* ReaderDocumentOutline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderDocumentOutline.swift; sourceTree = "<group>"; };
+		6A91CF9021AFC047002E2B94 /* ReaderDocumentOutlineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderDocumentOutlineItem.swift; sourceTree = "<group>"; };
 		6AA3F7BC21AE30E500E63E8A /* ReaderWatermark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderWatermark.swift; sourceTree = "<group>"; };
 		6AA3F7C521AE8D1500E63E8A /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		6AF8DD5E21B00C5100EDCC38 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		6AF8DD6E21B01C8500EDCC38 /* UXMPDFKit_Example-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UXMPDFKit_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		6AF8DD6F21B0E11900EDCC38 /* pdf_reference_1-7.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "pdf_reference_1-7.pdf"; sourceTree = "<group>"; };
 		8406D3B8437F56C4C69AC1EF /* Pods-UXMPDFKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UXMPDFKit_Example.release.xcconfig"; path = "Target Support Files/Pods-UXMPDFKit_Example/Pods-UXMPDFKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		BBBB720EDBA88EF809DA6096 /* Pods-UXMPDFKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UXMPDFKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-UXMPDFKit_Example/Pods-UXMPDFKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -207,6 +218,7 @@
 				6A0ED74721AD7B7E003B79D8 /* Extensions */,
 				6A0ED74D21AD7B7E003B79D8 /* Annotations */,
 				6A0ED75321AD7B7E003B79D8 /* Watermark */,
+				6A91CF8B21AFBA8E002E2B94 /* Outlines */,
 				6A0ED75621AD7B7E003B79D8 /* Model */,
 				6A0ED75A21AD7B7E003B79D8 /* View */,
 				6A0ED75D21AD7B7E003B79D8 /* TextParser */,
@@ -263,6 +275,7 @@
 				6A0ED74A21AD7B7E003B79D8 /* UIImage.swift */,
 				6A0ED74B21AD7B7E003B79D8 /* UIViewController.swift */,
 				6A0ED74C21AD7B7E003B79D8 /* CGRect.swift */,
+				6AF8DD5E21B00C5100EDCC38 /* StringExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -324,6 +337,16 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		6A91CF8B21AFBA8E002E2B94 /* Outlines */ = {
+			isa = PBXGroup;
+			children = (
+				6AF8DD6E21B01C8500EDCC38 /* UXMPDFKit_Example-Bridging-Header.h */,
+				6A91CF8C21AFBAC7002E2B94 /* ReaderDocumentOutline.swift */,
+				6A91CF9021AFC047002E2B94 /* ReaderDocumentOutlineItem.swift */,
+			);
+			path = Outlines;
+			sourceTree = "<group>";
+		};
 		6AA3F7BE21AE8C5000E63E8A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +367,8 @@
 		6AA3F7C821AE8D6300E63E8A /* PDFs */ = {
 			isa = PBXGroup;
 			children = (
+				6A20CF4621B11DD200AF5F10 /* testA.pdf */,
+				6AF8DD6F21B0E11900EDCC38 /* pdf_reference_1-7.pdf */,
 				6A139CD921A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf */,
 				6A8F85FA21A5305500A1C51E /* Reader.pdf */,
 				6A43292521900D47003C1A09 /* xmidnCompare-protected.pdf */,
@@ -418,7 +443,7 @@
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = 75J4834735;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -447,11 +472,13 @@
 			files = (
 				6A43292621900D47003C1A09 /* xmidnCompare-protected.pdf in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				6A20CF4721B11DD200AF5F10 /* testA.pdf in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				6A8F85FB21A5305500A1C51E /* Reader.pdf in Resources */,
 				61CBF9411D86EB7F00282554 /* sample3.pdf in Resources */,
 				616B61061CF7395100B743A7 /* sample2.pdf in Resources */,
+				6AF8DD7021B0E11900EDCC38 /* pdf_reference_1-7.pdf in Resources */,
 				6A0ED79121AD7B7F003B79D8 /* Images.xcassets in Resources */,
 				6A139CDA21A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf in Resources */,
 				614D2EE31C8C8A9A00A856CD /* sample.pdf in Resources */,
@@ -553,12 +580,15 @@
 				6A0ED78221AD7B7F003B79D8 /* CGRect.swift in Sources */,
 				6A0ED78621AD7B7F003B79D8 /* PDFPathAnnotation.swift in Sources */,
 				6AA3F7BD21AE30E500E63E8A /* ReaderWatermark.swift in Sources */,
+				6AF8DD5F21B00C5100EDCC38 /* StringExtensions.swift in Sources */,
 				6A0ED78E21AD7B7F003B79D8 /* PDFBarButton.swift in Sources */,
 				6A0ED77621AD7B7F003B79D8 /* PDFFormSignatureField.swift in Sources */,
 				6A0ED78821AD7B7F003B79D8 /* ReaderPageTiledView.swift in Sources */,
 				6A0ED77121AD7B7F003B79D8 /* PDFPageContentView.swift in Sources */,
 				61D3B3771CDE9C1600E7C3A6 /* ExampleViewController.swift in Sources */,
 				6A0ED77F21AD7B7F003B79D8 /* CGPoint.swift in Sources */,
+				6A91CF9121AFC047002E2B94 /* ReaderDocumentOutlineItem.swift in Sources */,
+				6A91CF8D21AFBAC7002E2B94 /* ReaderDocumentOutline.swift in Sources */,
 				6A0ED77221AD7B7F003B79D8 /* PDFThumbnailViewCell.swift in Sources */,
 				6A0ED77421AD7B7F003B79D8 /* PDFDictionary.swift in Sources */,
 				6A0ED76221AD7B7F003B79D8 /* PDFViewController.swift in Sources */,
@@ -698,6 +728,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75J4834735;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -711,6 +742,8 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uxmstudio.uxmpdfit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../UXMPDFKit/Classes/Outlines/UXMPDFKit_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -722,6 +755,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 75J4834735;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,6 +769,7 @@
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Xfrontend -debug-time-function-bodies";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uxmstudio.uxmpdfit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "../UXMPDFKit/Classes/Outlines/UXMPDFKit_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

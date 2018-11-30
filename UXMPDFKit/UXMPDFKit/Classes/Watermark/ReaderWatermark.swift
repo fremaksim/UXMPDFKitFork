@@ -47,7 +47,7 @@ open class ReaderWatermark: NSObject {
             textSize.height = ceil(textSize.height)
             
             totalSize.height += textSize.height
-            if totalSize.width < textSize.width {
+            if totalSize.width < textSize.width { // get maximum text width
                 totalSize.width = textSize.width
             }
             textLines.append(text)
