@@ -275,16 +275,63 @@ extension ReaderDocumentOutline {
         }, &outlines)
         
         
-        var markInfo: CGPDFArrayRef? = nil
-        if  CGPDFDictionaryGetDictionary(catalog, "MarkInfo", &markInfo),
-            let safeMarkInfo = markInfo {
-            let count = CGPDFArrayGetCount(safeMarkInfo)
-            var mark: CGPDFObjectRef?  = nil
-            CGPDFArrayGetObject(safeMarkInfo, 0, &mark)
-            if let safeMark = mark {
-//                let str = safeMark as String
-                Log.output().info(safeMark)
-            }
+        var pages: CGPDFArrayRef? = nil
+        if  CGPDFDictionaryGetDictionary(catalog, "Pages", &pages),
+            let safePages = pages {
+//            let count = CGPDFArrayGetCount(safePages)
+//            for i in 0..<count {
+              let page = document.page(at: 1)
+                if let dict = page?.dictionary {
+//                    CGPDFDictionaryApplyFunction(dict, { (key, object, info) in
+//                        Log.output().debug("----")
+//                        NSLog("%s", key)
+//                    }, nil)
+                    var annots: CGPDFArrayRef? = nil
+                    if CGPDFDictionaryGetArray(dict, "Annots", &annots),
+                        let safeAnnots = annots {
+                        let count = CGPDFArrayGetCount(safeAnnots)
+                        Log.output().info(count)
+                        for i in 0..<count {
+                            var annot: CGPDFDictionaryRef? = nil
+                            if CGPDFArrayGetDictionary(safeAnnots, i, &annot),
+                                let safeAnnot = annot {
+                                
+                                var contents: CGPDFStringRef? = nil
+                                if CGPDFDictionaryGetString(safeAnnot, "Contents", &contents),
+                                    let safeContents = contents {
+                                    if let ref: CFString = CGPDFStringCopyTextString(safeContents) {
+                                        let text = ref as String
+                                        Log.output().verbose(text)
+                                    }
+                                }
+                                
+                                var rect: CGPDFArrayRef? = nil
+                                if CGPDFDictionaryGetObject(safeAnnot, "Rect", &rect),
+                                    let safeRect = rect {
+                                    
+                                    Log.output().info(CGPDFArrayGetCount(safeRect))
+                                    return nil
+                                    
+                                    var ll: CGPDFStringRef? = nil
+                                    for j in 0..<CGPDFArrayGetCount(safeRect) {
+                                        Log.output().debug(i)
+                                        Log.output().debug(j)
+                                        
+                                        CGPDFArrayGetString(safeRect, j, &ll)
+                                        if let safeLl = ll {
+                                            if let ref: CFString = CGPDFStringCopyTextString(safeLl) {
+                                                let point = ref as String
+                                                Log.output().verbose(point)
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+              
+//            }
         }
         return nil
     }

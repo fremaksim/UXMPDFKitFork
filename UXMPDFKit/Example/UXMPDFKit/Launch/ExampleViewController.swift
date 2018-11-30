@@ -16,12 +16,13 @@ class ExampleViewController: UIViewController {
        // let url = Bundle.main.path(forResource: "Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley", ofType: "pdf")!
 //        let url = Bundle.main.path(forResource: "Reader", ofType: "pdf")!
 //        let url = Bundle.main.path(forResource: "pdf_reference_1-7", ofType: "pdf")!
-        let url = Bundle.main.path(forResource: "testA", ofType: "pdf")!
+//        let url = Bundle.main.path(forResource: "testA", ofType: "pdf")!
+        let url = Bundle.main.path(forResource: "AcrobatReaderWelcome", ofType: "pdf")!
         let document = try! PDFDocument.from(filePath: url)
         
         if let cgDocument = document?.documentRef {
-            let outline = ReaderDocumentOutline(cgPDFDocument: cgDocument)
-            Log.output().warning(outline.description)
+            let _ = ReaderDocumentOutline(cgPDFDocument: cgDocument)
+//            Log.output().warning(outline.description)
         }
         
         let pdf = PDFViewController(document: document!)

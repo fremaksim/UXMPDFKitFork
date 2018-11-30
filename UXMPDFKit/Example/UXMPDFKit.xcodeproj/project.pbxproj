@@ -64,6 +64,7 @@
 		6A0ED79121AD7B7F003B79D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A0ED76121AD7B7E003B79D8 /* Images.xcassets */; };
 		6A139CDA21A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A139CD921A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf */; };
 		6A20CF4721B11DD200AF5F10 /* testA.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A20CF4621B11DD200AF5F10 /* testA.pdf */; };
+		6A20CF4921B134C800AF5F10 /* AcrobatReaderWelcome.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A20CF4821B134C800AF5F10 /* AcrobatReaderWelcome.pdf */; };
 		6A43292621900D47003C1A09 /* xmidnCompare-protected.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A43292521900D47003C1A09 /* xmidnCompare-protected.pdf */; };
 		6A8F85FB21A5305500A1C51E /* Reader.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6A8F85FA21A5305500A1C51E /* Reader.pdf */; };
 		6A91CF8D21AFBAC7002E2B94 /* ReaderDocumentOutline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91CF8C21AFBAC7002E2B94 /* ReaderDocumentOutline.swift */; };
@@ -136,6 +137,7 @@
 		6A0ED76121AD7B7E003B79D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6A139CD921A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf"; sourceTree = "<group>"; };
 		6A20CF4621B11DD200AF5F10 /* testA.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = testA.pdf; sourceTree = "<group>"; };
+		6A20CF4821B134C800AF5F10 /* AcrobatReaderWelcome.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = AcrobatReaderWelcome.pdf; sourceTree = "<group>"; };
 		6A43292521900D47003C1A09 /* xmidnCompare-protected.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "xmidnCompare-protected.pdf"; sourceTree = "<group>"; };
 		6A8F85FA21A5305500A1C51E /* Reader.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Reader.pdf; sourceTree = "<group>"; };
 		6A91CF8C21AFBAC7002E2B94 /* ReaderDocumentOutline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderDocumentOutline.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		6AA3F7C821AE8D6300E63E8A /* PDFs */ = {
 			isa = PBXGroup;
 			children = (
+				6A20CF4821B134C800AF5F10 /* AcrobatReaderWelcome.pdf */,
 				6A20CF4621B11DD200AF5F10 /* testA.pdf */,
 				6AF8DD6F21B0E11900EDCC38 /* pdf_reference_1-7.pdf */,
 				6A139CD921A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf */,
@@ -479,6 +482,7 @@
 				61CBF9411D86EB7F00282554 /* sample3.pdf in Resources */,
 				616B61061CF7395100B743A7 /* sample2.pdf in Resources */,
 				6AF8DD7021B0E11900EDCC38 /* pdf_reference_1-7.pdf in Resources */,
+				6A20CF4921B134C800AF5F10 /* AcrobatReaderWelcome.pdf in Resources */,
 				6A0ED79121AD7B7F003B79D8 /* Images.xcassets in Resources */,
 				6A139CDA21A7AEB3002D002A /* Systems Engineering - EAA - Patterns of Enterprise Application Architecture - Addison Wesley.pdf in Resources */,
 				614D2EE31C8C8A9A00A856CD /* sample.pdf in Resources */,
