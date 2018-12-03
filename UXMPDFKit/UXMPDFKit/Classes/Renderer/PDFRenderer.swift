@@ -29,12 +29,17 @@ open class PDFRenderController {
         let title = document.fileUrl?.lastPathComponent ?? "annotated.pdf"
         let tempPath = NSTemporaryDirectory() + title
         
+        // nil 为document info https://developer.apple.com/documentation/uikit/1623927-uigraphicsbeginpdfcontexttofile?language=occ
         UIGraphicsBeginPDFContextToFile(tempPath, CGRect.zero, nil)
         for i in 1...pages {
             let page = documentRef?.page(at: i)
             let bounds = document.boundsForPDFPage(i)
             
             guard let context = UIGraphicsGetCurrentContext() else { continue }
+            
+            // nil 为page info  https://developer.apple.com/documentation/uikit/1623915-uigraphicsbeginpdfpagewithinfo
+            
+            // page info is Box keys in CGContext, document info is metadata keys in CGContext
             UIGraphicsBeginPDFPageWithInfo(bounds, nil)
             
             // 转换默认的 Quartz2D (Origin 在左下角) to UIView 坐标系统 （Origin 在左上角）

@@ -277,7 +277,7 @@ extension ReaderDocumentOutline {
         
         var pages: CGPDFArrayRef? = nil
         if  CGPDFDictionaryGetDictionary(catalog, "Pages", &pages),
-            let safePages = pages {
+            let _ = pages {
 //            let count = CGPDFArrayGetCount(safePages)
 //            for i in 0..<count {
               let page = document.page(at: 1)
