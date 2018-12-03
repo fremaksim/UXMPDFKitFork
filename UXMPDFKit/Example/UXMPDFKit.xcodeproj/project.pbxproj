@@ -358,6 +358,38 @@
 			path = Outlines;
 			sourceTree = "<group>";
 		};
+		6A966A3221B5284200B2753A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6AFC63EF21B4E1B000F60E3D /* ReaderPDFAnnotation.swift */,
+				6AFC63F121B4E34000F60E3D /* ReaderPDFBorder.swift */,
+				6AFC63F321B4E38C00F60E3D /* ReaderPDFAction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6A966A3321B5285D00B2753A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6A966A3421B5286200B2753A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A966A3021B5264E00B2753A /* ReaderPDFAnnotationViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6A966A3521B5286F00B2753A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		6AA3F7BE21AE8C5000E63E8A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
@@ -406,10 +438,10 @@
 		6AFC63EE21B4E17A00F60E3D /* Se7en */ = {
 			isa = PBXGroup;
 			children = (
-				6AFC63EF21B4E1B000F60E3D /* ReaderPDFAnnotation.swift */,
-				6AFC63F121B4E34000F60E3D /* ReaderPDFBorder.swift */,
-				6AFC63F321B4E38C00F60E3D /* ReaderPDFAction.swift */,
-				6A966A3021B5264E00B2753A /* ReaderPDFAnnotationViewController.swift */,
+				6A966A3521B5286F00B2753A /* ViewModels */,
+				6A966A3421B5286200B2753A /* ViewControllers */,
+				6A966A3321B5285D00B2753A /* Views */,
+				6A966A3221B5284200B2753A /* Models */,
 			);
 			path = Se7en;
 			sourceTree = "<group>";
